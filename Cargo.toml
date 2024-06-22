@@ -8,5 +8,6 @@ edition = "2021"
 [dependencies]
 actix-web = "4.0"
 serde = { version = "1.0", features = ["derive"] }
-sqlx = { version = "0.6.3", features = ["mysql", "runtime-actix-native-tls"] }
+serde_json = "1.0"
+sqlx = { version = "0.6.3", features = ["runtime-tokio-native-tls", "macros", "mysql"] }
 tokio = { version = "1", features = ["full"] }
