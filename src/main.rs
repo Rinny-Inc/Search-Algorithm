@@ -47,7 +47,7 @@ async fn search(
     }
 
     let search_pattern = format!("%{}%", search_query);
-    let rows = sqlx::query("SELECT nickname FROM stats WHERE LOWER(nickname) LIKE ?")
+    let rows = sqlx::query("SELECT nickname FROM economy WHERE LOWER(nickname) LIKE ?")
         .bind(search_pattern)
         .fetch_all(&data.db_pool)
         .await
